@@ -1,84 +1,864 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <title>Hesham Awad – Senior Analytics & BI Consultant</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Senior Analytics, Power BI, and Data Consulting Professional" />
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
-    }
-    h1, h2 {
-      color: #0b5394;
-    }
-    ul {
-      margin-left: 20px;
-    }
-    a {
-      color: #0b5394;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .section {
-      margin-bottom: 32px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesham Awad - Data Analyst | Power BI & SAP Specialist</title>
+    <meta name="description" content="Data Analyst mit 4+ Jahren Erfahrung in Power BI, SAP Analytics Cloud und Business Intelligence. Microsoft & SAP zertifiziert.">
+    <meta name="keywords" content="Data Analyst, Power BI, SAP Analytics Cloud, Business Intelligence, Sales Analytics, Data Modeling, ETL">
+    <meta name="author" content="Hesham Awad">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230, 126, 34, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 8px;
+            display: flex;
+            gap: 5px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .lang-btn {
+            padding: 10px 20px;
+            border: none;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .lang-btn:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-btn.active {
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+            color: #fff;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 25px 50px;
+            border-radius: 20px;
+            margin: 20px 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #e67e22, #f39c12);
+            transition: width 0.3s;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff 0%, #e67e22 50%, #f39c12 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 28px;
+            color: #f39c12;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .hero .tagline {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 40px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #fff, #e67e22);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-section {
+            max-width: 1000px;
+            margin: 80px auto;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 25px;
+        }
+
+        .about-section p {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.8;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .skills-section {
+            max-width: 1000px;
+            margin: 80px auto;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 35px;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            border-color: rgba(230, 126, 34, 0.5);
+            box-shadow: 0 10px 40px rgba(230, 126, 34, 0.2);
+        }
+
+        .skill-category h3 {
+            color: #f39c12;
+            font-size: 22px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skill-category li {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 10px 0;
+            font-size: 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .skill-category li:last-child {
+            border-bottom: none;
+        }
+
+        .experience-section {
+            max-width: 1000px;
+            margin: 80px auto;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 25px;
+        }
+
+        .experience-section ul {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 2;
+            font-size: 17px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-section li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .experience-section li::before {
+            content: '▸';
+            color: #e67e22;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .cert-section {
+            max-width: 1000px;
+            margin: 80px auto;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .cert-box {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #e67e22;
+            padding: 35px;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .cert-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(230, 126, 34, 0.2);
+        }
+
+        .cert-box h3 {
+            color: #f39c12;
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .cert-box ul {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 2;
+            font-size: 16px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .cert-box li {
+            margin-bottom: 10px;
+        }
+
+        .cert-box li::before {
+            content: '✓ ';
+            color: #e67e22;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .dashboard-section {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 60px;
+            border-radius: 25px;
+            margin: 80px 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .dashboard-preview {
+            width: 100%;
+            height: 600px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .dashboard-preview iframe {
+            border-radius: 15px;
+            border: none;
+        }
+
+        .contact-section {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 60px;
+            border-radius: 25px;
+            text-align: center;
+            margin: 80px 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-section h2 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #fff, #e67e22);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-link {
+            display: inline-block;
+            padding: 16px 35px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(230, 126, 34, 0.5);
+            color: #f39c12;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .contact-link:hover {
+            background: linear-gradient(135deg, #e67e22, #f39c12);
+            color: #fff;
+            border-color: transparent;
+            transform: scale(1.05);
+        }
+
+        .certification-badge {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .certification-badge img {
+            width: 120px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(230, 126, 34, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: rgba(255, 255, 255, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 80px;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+                padding: 30px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero .subtitle {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .skills-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-section,
+            .experience-section,
+            .dashboard-section,
+            .contact-section {
+                padding: 40px 30px;
+            }
+
+            .dashboard-preview {
+                height: 400px;
+            }
+
+            .language-switcher {
+                top: 10px;
+                right: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="bg-animation"></div>
 
-  <h1>Hesham Awad</h1>
-  <p><strong>Senior Analytics & Business Intelligence Consultant</strong></p>
-  <p>Germany / Remote</p>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('de')" id="btn-de">
+            🇩🇪 DE
+        </button>
+        <button class="lang-btn" onclick="switchLanguage('en')" id="btn-en">
+            🇬🇧 EN
+        </button>
+    </div>
 
-  <div class="section">
-    <h2>Profile</h2>
-    <p>
-      Senior data and analytics consultant with strong experience in Power BI,
-      data modeling, reporting, and business-driven analytics solutions.
-      Proven track record delivering insights for stakeholders across multiple industries.
-    </p>
-  </div>
+    <div class="container">
+        <!-- German Content -->
+        <div class="lang-content active" id="content-de">
+            <header>
+                <div class="logo">Hesham Awad</div>
+                <nav>
+                    <a href="#about">Über mich</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Erfahrung</a>
+                    <a href="#certifications">Zertifikate</a>
+                </nav>
+            </header>
 
-  <div class="section">
-    <h2>Core Skills</h2>
-    <ul>
-      <li>Power BI (DAX, Data Modeling, Performance Optimization)</li>
-      <li>SQL & Data Warehousing</li>
-      <li>Business Analytics & KPI Design</li>
-      <li>Data Visualization & Storytelling</li>
-      <li>Stakeholder Communication</li>
-    </ul>
-  </div>
+            <section class="hero">
+                <h1>Hesham Awad</h1>
+                <div class="subtitle">Data Analyst</div>
+                <div class="tagline">Power BI & SAP Specialist | Microsoft & SAP Certified</div>
+                <p>4+ Jahre Erfahrung in Business Intelligence, Sales Analytics und Data Modeling mit Power BI, SAP Analytics Cloud und SAP BW/4HANA</p>
+            </section>
 
-  <div class="section">
-    <h2>Certifications</h2>
-    <ul>
-      <li>Microsoft Power BI Certification</li>
-      <li>Salesforce (if applicable)</li>
-    </ul>
-  </div>
+            <section class="about-section" id="about">
+                <h2 class="section-title">Über mich</h2>
+                <p>
+                    In den letzten vier Jahren habe ich umfassende Erfahrungen mit <strong>Power BI</strong> (Power Query, komplexe DAX-Messwerte, M Language, RLS), <strong>SAP Analytics Cloud</strong>, AFO und <strong>Python</strong> gesammelt.
+                </p>
+                <p>
+                    Ich habe <strong>ETL-Prozesse, Datenmodellierung, Dashboards und Berichte</strong> erstellt, die Daten aus Quellen wie HubSpot, SAP ERP ITP, CRM SAP Cloud for Customer und MS SharePoint integriert haben.
+                </p>
+                <p>
+                    Als <strong>Key User für CRM SAP Cloud for Customer</strong> habe ich Workflows in Power Automate und Formulare in Power Apps entwickelt. Kürzlich wurde ich von Microsoft als Power BI Data Analyst Associate und von SAP in Reporting, Modeling und Data Acquisition mit SAP BW/4HANA 2.x zertifiziert.
+                </p>
+            </section>
 
-  <div class="section">
-    <h2>Links</h2>
-    <ul>
-      <li><a href="https://www.awadconsulting.de" target="_blank">Company Website</a></li>
-      <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-      <li><a href="https://github.com/heshams" target="_blank">GitHub</a></li>
-    </ul>
-  </div>
+            <section class="skills-section" id="skills">
+                <h2 class="section-title">Technische Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>📊 Microsoft Stack</h3>
+                        <ul>
+                            <li>Power BI (Power Query, DAX, M Language, RLS)</li>
+                            <li>Power Automate</li>
+                            <li>Power Apps</li>
+                            <li>Microsoft SharePoint</li>
+                        </ul>
+                    </div>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-  </div>
+                    <div class="skill-category">
+                        <h3>🔷 SAP Stack</h3>
+                        <ul>
+                            <li>SAP Analytics Cloud</li>
+                            <li>SAP BW/4HANA 2.x</li>
+                            <li>SAP ERP ITP</li>
+                            <li>CRM SAP Cloud for Customer</li>
+                        </ul>
+                    </div>
 
+                    <div class="skill-category">
+                        <h3>💻 Programmierung & Tools</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>DAX & M Language</li>
+                            <li>SQL</li>
+                            <li>AFO (Analytics & Forecasting)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🎯 Kernkompetenzen</h3>
+                        <ul>
+                            <li>ETL Process Design</li>
+                            <li>Data Modeling</li>
+                            <li>Dashboard Development</li>
+                            <li>Sales Analytics</li>
+                            <li>KPI Reporting</li>
+                            <li>Data Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="experience-section" id="experience">
+                <h2 class="section-title">Berufserfahrung</h2>
+                <ul>
+                    <li>4+ Jahre Erfahrung als <strong>Sales Analyst</strong> und Data Analyst</li>
+                    <li>Entwicklung und Implementierung von ETL-Prozessen für Multi-Source-Datenintegration</li>
+                    <li>Erstellung komplexer Datenmodelle und interaktiver Dashboards in Power BI und SAP Analytics Cloud</li>
+                    <li>Key User für CRM SAP Cloud for Customer mit Fokus auf Prozessautomatisierung</li>
+                    <li>Integration von Datenquellen: HubSpot, SAP ERP, SAP CRM Cloud, Microsoft SharePoint</li>
+                    <li>Entwicklung von Workflows in Power Automate und Formularen in Power Apps</li>
+                    <li>Erstellung von KPI-Berichten und Management-Dashboards für Sales-Performance-Analyse</li>
+                </ul>
+            </section>
+
+            <section class="cert-section" id="certifications">
+                <h2 class="section-title">Zertifizierungen & Qualifikationen</h2>
+                <div class="cert-grid">
+                    <div class="cert-box">
+                        <h3>Microsoft Zertifizierung</h3>
+                        <ul>
+                            <li>Power BI Data Analyst Associate</li>
+                        </ul>
+                    </div>
+
+                    <div class="cert-box">
+                        <h3>SAP Zertifizierung</h3>
+                        <ul>
+                            <li>Reporting, Modeling & Data Acquisition with SAP BW/4HANA 2.x</li>
+                        </ul>
+                    </div>
+
+                    <div class="cert-box">
+                        <h3>Weitere Qualifikationen</h3>
+                        <ul>
+                            <li>ITIL 4 Foundation</li>
+                            <li>Scrum</li>
+                            <li>PRINCE2</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2 class="section-title">Power BI Dashboard Beispiel</h2>
+                <div class="dashboard-preview">
+                    <iframe
+                        title="Power BI Dashboard Sample"
+                        src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
+                        width="100%"
+                        height="600"
+                        frameborder="0"
+                        allowFullScreen="true">
+                    </iframe>
+                </div>
+            </section>
+
+
+
+            <footer>
+                <p>© 2026 Hesham Awad · Data Analyst · Paderborn, Germany</p>
+                <p style="margin-top: 10px; font-size: 14px;">Power BI | SAP Analytics Cloud | Business Intelligence | Sales Analytics</p>
+            </footer>
+        </div>
+
+        <!-- English Content -->
+        <div class="lang-content" id="content-en">
+            <header>
+                <div class="logo">Hesham Awad</div>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#certifications">Certifications</a>
+                </nav>
+            </header>
+
+            <section class="hero">
+                <h1>Hesham Awad</h1>
+                <div class="subtitle">Data Analyst</div>
+                <div class="tagline">Power BI & SAP Specialist | Microsoft & SAP Certified</div>
+                <p>4+ years of experience in Business Intelligence, Sales Analytics, and Data Modeling with Power BI, SAP Analytics Cloud, and SAP BW/4HANA</p>
+            </section>
+
+            <section class="about-section" id="about">
+                <h2 class="section-title">About Me</h2>
+                <p>
+                    Over the past four years, I have gained comprehensive experience with <strong>Power BI</strong> (Power Query, complex DAX measures, M Language, RLS), <strong>SAP Analytics Cloud</strong>, AFO, and <strong>Python</strong>.
+                </p>
+                <p>
+                    I have created <strong>ETL processes, data models, dashboards, and reports</strong> that integrate data from sources such as HubSpot, SAP ERP ITP, CRM SAP Cloud for Customer, and MS SharePoint.
+                </p>
+                <p>
+                    As a <strong>Key User for CRM SAP Cloud for Customer</strong>, I have developed workflows in Power Automate and forms in Power Apps. I was recently certified by Microsoft as a Power BI Data Analyst Associate and by SAP in Reporting, Modeling, and Data Acquisition with SAP BW/4HANA 2.x.
+                </p>
+            </section>
+
+            <section class="skills-section" id="skills">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>📊 Microsoft Stack</h3>
+                        <ul>
+                            <li>Power BI (Power Query, DAX, M Language, RLS)</li>
+                            <li>Power Automate</li>
+                            <li>Power Apps</li>
+                            <li>Microsoft SharePoint</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🔷 SAP Stack</h3>
+                        <ul>
+                            <li>SAP Analytics Cloud</li>
+                            <li>SAP BW/4HANA 2.x</li>
+                            <li>SAP ERP ITP</li>
+                            <li>CRM SAP Cloud for Customer</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>💻 Programming & Tools</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>DAX & M Language</li>
+                            <li>SQL</li>
+                            <li>AFO (Analytics & Forecasting)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🎯 Core Competencies</h3>
+                        <ul>
+                            <li>ETL Process Design</li>
+                            <li>Data Modeling</li>
+                            <li>Dashboard Development</li>
+                            <li>Sales Analytics</li>
+                            <li>KPI Reporting</li>
+                            <li>Data Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="experience-section" id="experience">
+                <h2 class="section-title">Professional Experience</h2>
+                <ul>
+                    <li>4+ years of experience as <strong>Sales Analyst</strong> and Data Analyst</li>
+                    <li>Development and implementation of ETL processes for multi-source data integration</li>
+                    <li>Creation of complex data models and interactive dashboards in Power BI and SAP Analytics Cloud</li>
+                    <li>Key User for CRM SAP Cloud for Customer with focus on process automation</li>
+                    <li>Integration of data sources: HubSpot, SAP ERP, SAP CRM Cloud, Microsoft SharePoint</li>
+                    <li>Development of workflows in Power Automate and forms in Power Apps</li>
+                    <li>Creation of KPI reports and management dashboards for sales performance analysis</li>
+                </ul>
+            </section>
+
+            <section class="cert-section" id="certifications">
+                <h2 class="section-title">Certifications & Qualifications</h2>
+                <div class="cert-grid">
+                    <div class="cert-box">
+                        <h3>Microsoft Certification</h3>
+                        <ul>
+                            <li>Power BI Data Analyst Associate</li>
+                        </ul>
+                    </div>
+
+                    <div class="cert-box">
+                        <h3>SAP Certification</h3>
+                        <ul>
+                            <li>Reporting, Modeling & Data Acquisition with SAP BW/4HANA 2.x</li>
+                        </ul>
+                    </div>
+
+                    <div class="cert-box">
+                        <h3>Additional Qualifications</h3>
+                        <ul>
+                            <li>ITIL 4 Foundation</li>
+                            <li>Scrum</li>
+                            <li>PRINCE2</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dashboard-section">
+                <h2 class="section-title">Power BI Dashboard Sample</h2>
+                <div class="dashboard-preview">
+                    <iframe
+                        title="Power BI Dashboard Sample"
+                        src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
+                        width="100%"
+                        height="600"
+                        frameborder="0"
+                        allowFullScreen="true">
+                    </iframe>
+                </div>
+            </section>
+
+
+
+            <footer>
+                <p>© 2026 Hesham Awad · Data Analyst · Paderborn, Germany</p>
+                <p style="margin-top: 10px; font-size: 14px;">Power BI | SAP Analytics Cloud | Business Intelligence | Sales Analytics</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Language Switcher
+        function switchLanguage(lang) {
+            document.querySelectorAll('.lang-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            document.getElementById('content-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+            
+            document.documentElement.lang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+            
+            if (lang === 'de') {
+                document.title = 'Hesham Awad - Data Analyst | Power BI & SAP Specialist';
+                document.querySelector('meta[name="description"]').content = 'Data Analyst mit 4+ Jahren Erfahrung in Power BI, SAP Analytics Cloud und Business Intelligence. Microsoft & SAP zertifiziert.';
+            } else {
+                document.title = 'Hesham Awad - Data Analyst | Power BI & SAP Specialist';
+                document.querySelector('meta[name="description"]').content = 'Data Analyst with 4+ years of experience in Power BI, SAP Analytics Cloud, and Business Intelligence. Microsoft & SAP certified.';
+            }
+        }
+
+        // Load preferred language
+        window.addEventListener('load', function() {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'de';
+            switchLanguage(savedLang);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
