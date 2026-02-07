@@ -8,16 +8,6 @@
   <meta name="keywords" content="Data Analyst, Power BI, SAP Analytics Cloud, Business Intelligence, Sales Analytics, Data Modeling, ETL" />
   <meta name="author" content="Hesham Awad" />
 
-  <!-- Google Analytics (GA4) -->
-  <!-- IMPORTANT: replace G-XXXXXXXXXX below with your real ID OR remove that line entirely -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JC8GBTL88P"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-JC8GBTL88P', { anonymize_ip: true });
-  </script>
-
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -156,7 +146,7 @@
 
     .hero {
       text-align: center;
-      padding: 80px 20px;
+      padding: 80px 20px 60px;
       animation: fadeIn 1s ease-out;
     }
 
@@ -186,11 +176,11 @@
     .hero .tagline {
       font-size: 18px;
       color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .hero p {
-      font-size: 20px;
+      font-size: 19px;
       color: rgba(255, 255, 255, 0.8);
       max-width: 800px;
       margin-left: auto;
@@ -202,7 +192,7 @@
       text-align: center;
       font-size: 42px;
       font-weight: 700;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
       background: linear-gradient(135deg, #fff, #e67e22);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -211,7 +201,7 @@
 
     .about-section {
       max-width: 1000px;
-      margin: 80px auto;
+      margin: 60px auto;
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -222,16 +212,16 @@
     .about-section p {
       color: rgba(255, 255, 255, 0.85);
       line-height: 1.8;
-      font-size: 18px;
-      margin-bottom: 25px;
+      font-size: 17px;
+      margin-bottom: 22px;
     }
 
-    .skills-section { max-width: 1000px; margin: 80px auto; }
+    .skills-section { max-width: 1000px; margin: 60px auto; }
 
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      gap: 30px;
+      gap: 25px;
       margin-top: 40px;
     }
 
@@ -239,7 +229,7 @@
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 35px;
+      padding: 30px;
       border-radius: 20px;
       transition: all 0.3s;
     }
@@ -252,8 +242,8 @@
 
     .skill-category h3 {
       color: #f39c12;
-      font-size: 22px;
-      margin-bottom: 20px;
+      font-size: 20px;
+      margin-bottom: 18px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -263,8 +253,8 @@
 
     .skill-category li {
       color: rgba(255, 255, 255, 0.8);
-      padding: 10px 0;
-      font-size: 16px;
+      padding: 9px 0;
+      font-size: 15px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
@@ -272,7 +262,7 @@
 
     .experience-section {
       max-width: 1000px;
-      margin: 80px auto;
+      margin: 60px auto;
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -282,15 +272,15 @@
 
     .experience-section ul {
       color: rgba(255, 255, 255, 0.85);
-      line-height: 2;
-      font-size: 17px;
+      line-height: 1.9;
+      font-size: 16px;
       list-style: none;
       padding-left: 0;
     }
 
     .experience-section li {
-      margin-bottom: 15px;
-      padding-left: 30px;
+      margin-bottom: 14px;
+      padding-left: 28px;
       position: relative;
     }
 
@@ -302,12 +292,12 @@
       left: 0;
     }
 
-    .cert-section { max-width: 1000px; margin: 80px auto; }
+    .cert-section { max-width: 1000px; margin: 60px auto; }
 
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
       margin-top: 40px;
     }
 
@@ -316,9 +306,11 @@
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-left: 4px solid #e67e22;
-      padding: 35px;
+      padding: 30px;
       border-radius: 15px;
       transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
     }
 
     .cert-box:hover {
@@ -328,20 +320,21 @@
 
     .cert-box h3 {
       color: #f39c12;
-      font-size: 20px;
+      font-size: 19px;
       margin-bottom: 15px;
       font-weight: 600;
     }
 
     .cert-box ul {
       color: rgba(255, 255, 255, 0.85);
-      line-height: 2;
-      font-size: 16px;
+      line-height: 1.8;
+      font-size: 15px;
       list-style: none;
       padding-left: 0;
+      margin-bottom: 20px;
     }
 
-    .cert-box li { margin-bottom: 10px; }
+    .cert-box li { margin-bottom: 8px; }
     .cert-box li::before {
       content: '✓ ';
       color: #e67e22;
@@ -349,50 +342,36 @@
       margin-right: 8px;
     }
 
-    /* Certificate images (NEW) */
-    .cert-images {
-      margin-top: 25px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 18px;
-    }
-
-    .cert-images a {
+    /* Certificate images inside boxes */
+    .cert-img-link {
       display: block;
-      text-decoration: none;
-      border-radius: 12px;
+      margin-top: auto;
+      border-radius: 10px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(0,0,0,0.2);
-      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.2);
+      transition: all 0.3s;
     }
 
-    .cert-images a:hover {
-      transform: translateY(-4px);
-      border-color: rgba(230, 126, 34, 0.5);
-      box-shadow: 0 12px 30px rgba(230, 126, 34, 0.15);
+    .cert-img-link:hover {
+      transform: scale(1.02);
+      border-color: rgba(230, 126, 34, 0.4);
+      box-shadow: 0 8px 20px rgba(230, 126, 34, 0.15);
     }
 
-    .cert-images img {
+    .cert-img {
       width: 100%;
       height: auto;
       display: block;
-    }
-
-    .cert-images .caption {
-      padding: 12px 14px;
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 14px;
-      font-weight: 600;
     }
 
     .dashboard-section {
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 60px;
+      padding: 50px;
       border-radius: 25px;
-      margin: 80px 0;
+      margin: 60px 0;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 
@@ -402,6 +381,7 @@
       background: rgba(0, 0, 0, 0.3);
       border-radius: 15px;
       margin-top: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .dashboard-preview iframe {
@@ -414,7 +394,8 @@
       padding: 40px;
       color: rgba(255, 255, 255, 0.5);
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      margin-top: 80px;
+      margin-top: 60px;
+      font-size: 14px;
     }
 
     .lang-content { display: none; }
@@ -425,9 +406,9 @@
       nav { flex-direction: column; gap: 15px; text-align: center; }
       .hero h1 { font-size: 36px; }
       .hero .subtitle { font-size: 22px; }
-      .hero p { font-size: 18px; }
+      .hero p { font-size: 17px; }
       .skills-grid, .cert-grid { grid-template-columns: 1fr; }
-      .about-section, .experience-section, .dashboard-section { padding: 40px 30px; }
+      .about-section, .experience-section, .dashboard-section { padding: 35px 25px; }
       .dashboard-preview { height: 400px; }
       .language-switcher { top: 10px; right: 10px; }
     }
@@ -468,7 +449,7 @@
         <h2 class="section-title">Über mich</h2>
         <p>In den letzten vier Jahren habe ich umfassende Erfahrungen mit <strong>Power BI</strong> (Power Query, komplexe DAX-Messwerte, M Language, RLS), <strong>SAP Analytics Cloud</strong>, AFO und <strong>Python</strong> gesammelt.</p>
         <p>Ich habe <strong>ETL-Prozesse, Datenmodellierung, Dashboards und Berichte</strong> erstellt, die Daten aus Quellen wie HubSpot, SAP ERP ITP, CRM SAP Cloud for Customer und MS SharePoint integriert haben.</p>
-        <p>Als <strong>Key User für CRM SAP Cloud for Customer</strong> habe ich Workflows in Power Automate und Formulare in Power Apps entwickelt. Kürzlich wurde ich von Microsoft als Power BI Data Analyst Associate und von SAP in Reporting, Modeling und Data Acquisition mit SAP BW/4HANA 2.x zertifiziert.</p>
+        <p>Als <strong>Key User für CRM SAP Cloud for Customer</strong> habe ich Workflows in Power Automate und Formulare in Power Apps entwickelt. Kürzlich wurde ich von Microsoft als Power BI Data Analyst Associate und von SAP als Data Engineer – Data Fabric zertifiziert.</p>
       </section>
 
       <section class="skills-section" id="skills">
@@ -538,11 +519,17 @@
           <div class="cert-box">
             <h3>Microsoft Zertifizierung</h3>
             <ul><li>Power BI Data Analyst Associate</li></ul>
+            <a href="Powerbi.jpg" target="_blank" rel="noopener noreferrer" class="cert-img-link">
+              <img src="Powerbi.jpg" alt="Microsoft Certified Power BI Data Analyst Associate" class="cert-img" />
+            </a>
           </div>
 
           <div class="cert-box">
             <h3>SAP Zertifizierung</h3>
             <ul><li>SAP Certified Associate – Data Engineer – Data Fabric</li></ul>
+            <a href="SAPBW4Hana.jpg" target="_blank" rel="noopener noreferrer" class="cert-img-link">
+              <img src="SAPBW4Hana.jpg" alt="SAP Certified Associate – Data Engineer – Data Fabric" class="cert-img" />
+            </a>
           </div>
 
           <div class="cert-box">
@@ -553,19 +540,6 @@
               <li>PRINCE2</li>
             </ul>
           </div>
-        </div>
-
-        <!-- NEW: Certificate images (click to open full size) -->
-        <div class="cert-images">
-          <a href="Powerbi.jpg" target="_blank" rel="noopener noreferrer">
-            <img src="Powerbi.jpg" alt="Microsoft Certified Power BI Data Analyst Associate - Hesham Awad" />
-            <div class="caption">Microsoft Certified: Power BI Data Analyst Associate</div>
-          </a>
-
-          <a href="SAPBW4Hana.jpg" target="_blank" rel="noopener noreferrer">
-            <img src="SAPBW4Hana.jpg" alt="SAP Certified Associate – Data Engineer – Data Fabric - Hesham Awad" />
-            <div class="caption">SAP Certified Associate – Data Engineer – Data Fabric</div>
-          </a>
         </div>
       </section>
 
@@ -584,7 +558,7 @@
 
       <footer>
         <p>© 2026 Hesham Awad · Data Analyst · Paderborn, Germany</p>
-        <p style="margin-top: 10px; font-size: 14px;">Power BI | SAP Analytics Cloud | Business Intelligence | Sales Analytics</p>
+        <p style="margin-top: 8px;">Power BI | SAP Analytics Cloud | Business Intelligence | Sales Analytics</p>
       </footer>
     </div>
 
@@ -611,7 +585,7 @@
         <h2 class="section-title">About Me</h2>
         <p>Over the past four years, I have gained comprehensive experience with <strong>Power BI</strong> (Power Query, complex DAX measures, M Language, RLS), <strong>SAP Analytics Cloud</strong>, AFO, and <strong>Python</strong>.</p>
         <p>I have created <strong>ETL processes, data models, dashboards, and reports</strong> that integrate data from sources such as HubSpot, SAP ERP ITP, CRM SAP Cloud for Customer, and MS SharePoint.</p>
-        <p>As a <strong>Key User for CRM SAP Cloud for Customer</strong>, I have developed workflows in Power Automate and forms in Power Apps. I was recently certified by Microsoft as a Power BI Data Analyst Associate and by SAP in Reporting, Modeling, and Data Acquisition with SAP BW/4HANA 2.x.</p>
+        <p>As a <strong>Key User for CRM SAP Cloud for Customer</strong>, I have developed workflows in Power Automate and forms in Power Apps. I was recently certified by Microsoft as a Power BI Data Analyst Associate and by SAP as Data Engineer – Data Fabric.</p>
       </section>
 
       <section class="skills-section" id="skills">
@@ -681,11 +655,17 @@
           <div class="cert-box">
             <h3>Microsoft Certification</h3>
             <ul><li>Power BI Data Analyst Associate</li></ul>
+            <a href="Powerbi.jpg" target="_blank" rel="noopener noreferrer" class="cert-img-link">
+              <img src="Powerbi.jpg" alt="Microsoft Certified Power BI Data Analyst Associate" class="cert-img" />
+            </a>
           </div>
 
           <div class="cert-box">
             <h3>SAP Certification</h3>
             <ul><li>SAP Certified Associate – Data Engineer – Data Fabric</li></ul>
+            <a href="SAPBW4Hana.jpg" target="_blank" rel="noopener noreferrer" class="cert-img-link">
+              <img src="SAPBW4Hana.jpg" alt="SAP Certified Associate – Data Engineer – Data Fabric" class="cert-img" />
+            </a>
           </div>
 
           <div class="cert-box">
@@ -696,19 +676,6 @@
               <li>PRINCE2</li>
             </ul>
           </div>
-        </div>
-
-        <!-- NEW: Certificate images (click to open full size) -->
-        <div class="cert-images">
-          <a href="Powerbi.jpg" target="_blank" rel="noopener noreferrer">
-            <img src="Powerbi.jpg" alt="Microsoft Certified Power BI Data Analyst Associate - Hesham Awad" />
-            <div class="caption">Microsoft Certified: Power BI Data Analyst Associate</div>
-          </a>
-
-          <a href="SAPBW4Hana.jpg" target="_blank" rel="noopener noreferrer">
-            <img src="SAPBW4Hana.jpg" alt="SAP Certified Associate – Data Engineer – Data Fabric - Hesham Awad" />
-            <div class="caption">SAP Certified Associate – Data Engineer – Data Fabric</div>
-          </a>
         </div>
       </section>
 
@@ -727,7 +694,7 @@
 
       <footer>
         <p>© 2026 Hesham Awad · Data Analyst · Paderborn, Germany</p>
-        <p style="margin-top: 10px; font-size: 14px;">Power BI | SAP Analytics Cloud | Business Intelligence | Sales Analytics</p>
+        <p style="margin-top: 8px;">Power BI | SAP Analytics Cloud | Business Intelligence | Sales Analytics</p>
       </footer>
     </div>
   </div>
