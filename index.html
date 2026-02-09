@@ -551,7 +551,7 @@
 
       <section class="dashboard-section">
         <h2 class="section-title">Power BI Dashboard Beispiel</h2>
-        <div class="dashboard-preview">
+        <div class="dashboard-preview" onclick="trackDashboardClick()">
           <iframe
             title="Power BI Dashboard Sample"
             src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
@@ -740,6 +740,16 @@
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+    // Track dashboard click
+  function trackDashboardClick() {
+    if (typeof gtag === "function") {
+      gtag('event', 'dashboard_click', {
+        event_category: 'engagement',
+        event_label: 'powerbi_iframe',
+        value: 1
+      });
+    }
+  }
   </script>
 </body>
 </html>
