@@ -550,18 +550,22 @@
       </section>
 
       <section class="dashboard-section">
-        <h2 class="section-title">Power BI Dashboard Beispiel</h2>
-        <div class="dashboard-preview" onclick="trackDashboardClick()">
-          <iframe
-            title="Power BI Dashboard Sample"
-            src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
-            width="100%"
-            height="600"
-            frameborder="0"
-            allowfullscreen="true"></iframe>
-        </div>
-      </section>
+  <h2 class="section-title">Power BI Dashboard Beispiel</h2>
 
+  <div class="dashboard-preview dashboard-track">
+    <div class="iframe-click-overlay" onclick="trackDashboardClick()"></div>
+
+    <iframe
+      title="Power BI Dashboard Sample"
+      src="https://app.powerbi.com/view?r=..."
+      width="100%"
+      height="600"
+      frameborder="0"
+      allowfullscreen="true">
+    </iframe>
+  </div>
+        
+</section>
       <footer>
         <p>© 2026 Hesham Awad · Data Analyst · Paderborn, Germany</p>
         <p style="margin-top: 8px;">Power BI | SAP Analytics Cloud | Business Intelligence | Sales Analytics</p>
@@ -741,15 +745,21 @@
       });
     });
     // Track dashboard click
-  function trackDashboardClick() {
-    if (typeof gtag === "function") {
-      gtag('event', 'dashboard_click', {
-        event_category: 'engagement',
-        event_label: 'powerbi_iframe',
-        value: 1
-      });
-    }
+  // Track dashboard click
+function trackDashboardClick() {
+  if (typeof gtag === "function") {
+    gtag('event', 'dashboard_click', {
+      event_category: 'engagement',
+      event_label: 'powerbi_iframe',
+      value: 1
+    });
   }
+
+  // Remove overlay so iframe becomes clickable
+  const overlay = document.querySelector('.iframe-click-overlay');
+  if (overlay) overlay.style.display = 'none';
+}
+
   </script>
 </body>
 </html>
