@@ -7,14 +7,15 @@
   <meta name="description" content="Data Analyst mit 4+ Jahren Erfahrung in Power BI, SAP Analytics Cloud und Business Intelligence. Microsoft & SAP zertifiziert." />
   <meta name="keywords" content="Data Analyst, Power BI, SAP Analytics Cloud, Business Intelligence, Sales Analytics, Data Modeling, ETL" />
   <meta name="author" content="Hesham Awad" />
+  
   <!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JC8GBTL88P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JC8GBTL88P', { anonymize_ip: true });
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JC8GBTL88P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JC8GBTL88P', { anonymize_ip: true });
+  </script>
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -107,7 +108,7 @@
       border-radius: 20px;
       margin: 20px 0 40px;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
       animation: slideDown 0.8s ease-out;
@@ -390,11 +391,24 @@
       border-radius: 15px;
       margin-top: 30px;
       border: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
     }
 
     .dashboard-preview iframe {
       border-radius: 15px;
       border: none;
+    }
+
+    /* Click overlay for tracking */
+    .iframe-click-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      z-index: 10;
+      background: transparent;
     }
 
     footer {
@@ -428,21 +442,21 @@
 
   <!-- Language Switcher -->
   <div class="language-switcher">
-    <button class="lang-btn active" onclick="switchLanguage('de')" id="btn-de">🇩🇪 DE</button>
-    <button class="lang-btn" onclick="switchLanguage('en')" id="btn-en">🇬🇧 EN</button>
+    <button class="lang-btn active" onclick="switchLanguage('de')" id="btn-de" aria-label="Deutsch">🇩🇪 DE</button>
+    <button class="lang-btn" onclick="switchLanguage('en')" id="btn-en" aria-label="English">🇬🇧 EN</button>
   </div>
 
   <div class="container">
 
     <!-- German Content -->
-    <div class="lang-content active" id="content-de">
+    <div class="lang-content active" id="content-de" lang="de">
       <header>
-        <div class="logo">Hesham Awad</div>
         <nav>
           <a href="#about">Über mich</a>
           <a href="#skills">Skills</a>
           <a href="#experience">Erfahrung</a>
           <a href="#certifications">Zertifikate</a>
+          <a href="#dashboard">Dashboard</a>
         </nav>
       </header>
 
@@ -549,23 +563,21 @@
         </div>
       </section>
 
-      <section class="dashboard-section">
-  <h2 class="section-title">Power BI Dashboard Beispiel</h2>
+      <section class="dashboard-section" id="dashboard">
+        <h2 class="section-title">Power BI Dashboard Beispiel</h2>
+        <div class="dashboard-preview">
+          <div class="iframe-click-overlay" onclick="trackDashboardClick()"></div>
+          <iframe
+            title="Power BI Dashboard Sample"
+            src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
+            width="100%"
+            height="600"
+            frameborder="0"
+            allowfullscreen="true">
+          </iframe>
+        </div>
+      </section>
 
-  <div class="dashboard-preview dashboard-track">
-    <div class="iframe-click-overlay" onclick="trackDashboardClick()"></div>
-
-    <iframe
-      title="Power BI Dashboard Sample"
-      src="https://app.powerbi.com/view?r=..."
-      width="100%"
-      height="600"
-      frameborder="0"
-      allowfullscreen="true">
-    </iframe>
-  </div>
-        
-</section>
       <footer>
         <p>© 2026 Hesham Awad · Data Analyst · Paderborn, Germany</p>
         <p style="margin-top: 8px;">Power BI | SAP Analytics Cloud | Business Intelligence | Sales Analytics</p>
@@ -573,14 +585,14 @@
     </div>
 
     <!-- English Content -->
-    <div class="lang-content" id="content-en">
+    <div class="lang-content" id="content-en" lang="en">
       <header>
-        <div class="logo">Hesham Awad</div>
         <nav>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#experience">Experience</a>
           <a href="#certifications">Certifications</a>
+          <a href="#dashboard">Dashboard</a>
         </nav>
       </header>
 
@@ -687,16 +699,18 @@
         </div>
       </section>
 
-      <section class="dashboard-section">
+      <section class="dashboard-section" id="dashboard">
         <h2 class="section-title">Power BI Dashboard Sample</h2>
         <div class="dashboard-preview">
+          <div class="iframe-click-overlay" onclick="trackDashboardClick()"></div>
           <iframe
             title="Power BI Dashboard Sample"
             src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
             width="100%"
             height="600"
             frameborder="0"
-            allowfullscreen="true"></iframe>
+            allowfullscreen="true">
+          </iframe>
         </div>
       </section>
 
@@ -734,6 +748,9 @@
     window.addEventListener('load', function() {
       const savedLang = localStorage.getItem('preferredLanguage') || 'de';
       switchLanguage(savedLang);
+      
+      // Track dashboard view when page loads
+      setupDashboardViewTracking();
     });
 
     // Smooth scroll
@@ -744,22 +761,55 @@
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
-    // Track dashboard click
-  // Track dashboard click
-function trackDashboardClick() {
-  if (typeof gtag === "function") {
-    gtag('event', 'dashboard_click', {
-      event_category: 'engagement',
-      event_label: 'powerbi_iframe',
-      value: 1
-    });
-  }
 
-  // Remove overlay so iframe becomes clickable
-  const overlay = document.querySelector('.iframe-click-overlay');
-  if (overlay) overlay.style.display = 'none';
-}
+    // Track when dashboard becomes visible (view tracking)
+    function setupDashboardViewTracking() {
+      const dashboardSection = document.querySelector('.dashboard-section');
+      if (!dashboardSection) return;
 
+      let hasTrackedView = false;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          // If dashboard is 50% visible and we haven't tracked it yet
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5 && !hasTrackedView) {
+            hasTrackedView = true;
+            
+            // Track dashboard view
+            if (typeof gtag === 'function') {
+              gtag('event', 'dashboard_view', {
+                event_category: 'engagement',
+                event_label: 'powerbi_dashboard_visible',
+                value: 1
+              });
+            }
+            
+            console.log('✅ Dashboard view tracked');
+          }
+        });
+      }, {
+        threshold: 0.5 // Trigger when 50% of dashboard is visible
+      });
+
+      observer.observe(dashboardSection);
+    }
+
+    // Track dashboard click (interaction tracking)
+    function trackDashboardClick() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'dashboard_click', {
+          event_category: 'engagement',
+          event_label: 'powerbi_dashboard_interaction',
+          value: 1
+        });
+      }
+
+      console.log('✅ Dashboard click tracked');
+
+      // Remove overlay so iframe becomes clickable
+      const overlay = document.querySelector('.iframe-click-overlay');
+      if (overlay) overlay.style.display = 'none';
+    }
   </script>
 </body>
 </html>
