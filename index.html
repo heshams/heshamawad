@@ -176,7 +176,7 @@
     }
 
     .hero .subtitle {
-      font-size: 28px;
+      font-size: 24px;
       color: #f39c12;
       font-weight: 600;
       margin-bottom: 15px;
@@ -384,6 +384,45 @@
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
 
+    .dashboard-item {
+      margin-bottom: 60px;
+    }
+
+    .dashboard-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .dashboard-subtitle {
+      color: #f39c12;
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .dashboard-description {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 10px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .dashboard-sources {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 14px;
+      font-style: italic;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .dashboard-sources strong {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
     .dashboard-preview {
       width: 100%;
       height: 700px;
@@ -564,17 +603,41 @@
       </section>
 
       <section class="dashboard-section" id="dashboard">
-        <h2 class="section-title">Power BI Dashboard Beispiel</h2>
-        <div class="dashboard-preview">
-          <div class="iframe-click-overlay" onclick="trackDashboardClick(event)"></div>
-          <iframe
-            title="Power BI Dashboard Sample"
-            src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
-            width="100%"
-            height="700"
-            frameborder="0"
-            allowfullscreen="true">
-          </iframe>
+        <h2 class="section-title">Power BI Dashboard Beispiele</h2>
+        
+        <!-- Dashboard 1: Sales Analytics -->
+        <div class="dashboard-item">
+          <h3 class="dashboard-subtitle">Sales Analytics Dashboard</h3>
+          <p class="dashboard-description">Interaktives Dashboard zur Analyse von Verkaufsdaten, KPIs und Performance-Metriken.</p>
+          <div class="dashboard-preview">
+            <div class="iframe-click-overlay" onclick="trackDashboardClick(event)"></div>
+            <iframe
+              title="Power BI Dashboard Sample"
+              src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
+              width="100%"
+              height="700"
+              frameborder="0"
+              allowfullscreen="true">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Dashboard 2: Gold Price & Macroeconomic -->
+        <div class="dashboard-item">
+          <h3 class="dashboard-subtitle">Gold Price &amp; Macroeconomic Dashboard</h3>
+          <p class="dashboard-description">Interaktives Dashboard zur Analyse von Gold-Kauf-/Verkaufsraten und makroökonomischen Indikatoren über mehrere Länder hinweg.</p>
+          <p class="dashboard-sources"><strong>Datenquellen:</strong> Commerzbank (Goldpreisdaten), Trading Economics (Makroökonomische Indikatoren)</p>
+          <div class="dashboard-preview">
+            <div class="iframe-click-overlay" onclick="trackDashboardClick(event)"></div>
+            <iframe
+              title="Gold Price Dashboard"
+              src="https://app.powerbi.com/view?r=eyJrIjoiOGY3YzQ0YTYtZjgzMy00YzBiLTllMTQtYjU2NTg3MTc0MjM3IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
+              width="100%"
+              height="700"
+              frameborder="0"
+              allowfullscreen="true">
+            </iframe>
+          </div>
         </div>
       </section>
 
@@ -598,7 +661,7 @@
 
       <section class="hero">
         <h1>Hesham Awad</h1>
-        <div class="subtitle">Data Analyst</div>
+        <div class="subtitle">Data Analytics | Business Intelligence | Commercial Insights</div>
         <div class="tagline">Microsoft &amp; SAP Certified</div>
       </section>
 
@@ -700,17 +763,41 @@
       </section>
 
       <section class="dashboard-section" id="dashboard-en">
-        <h2 class="section-title">Power BI Dashboard Sample</h2>
-        <div class="dashboard-preview">
-          <div class="iframe-click-overlay" onclick="trackDashboardClick(event)"></div>
-          <iframe
-            title="Power BI Dashboard Sample"
-            src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
-            width="100%"
-            height="700"
-            frameborder="0"
-            allowfullscreen="true">
-          </iframe>
+        <h2 class="section-title">Power BI Dashboard Samples</h2>
+        
+        <!-- Dashboard 1: Sales Analytics -->
+        <div class="dashboard-item">
+          <h3 class="dashboard-subtitle">Sales Analytics Dashboard</h3>
+          <p class="dashboard-description">Interactive dashboard analyzing sales data, KPIs, and performance metrics.</p>
+          <div class="dashboard-preview">
+            <div class="iframe-click-overlay" onclick="trackDashboardClick(event)"></div>
+            <iframe
+              title="Power BI Dashboard Sample"
+              src="https://app.powerbi.com/view?r=eyJrIjoiNTkyMGE2NjEtMjVkZS00M2Y5LTliZjAtYjgzMTk4Mjg3ZWU0IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
+              width="100%"
+              height="700"
+              frameborder="0"
+              allowfullscreen="true">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Dashboard 2: Gold Price & Macroeconomic -->
+        <div class="dashboard-item">
+          <h3 class="dashboard-subtitle">Gold Price &amp; Macroeconomic Dashboard</h3>
+          <p class="dashboard-description">Interactive dashboard analyzing gold buying/selling rates alongside macroeconomic indicators across multiple countries.</p>
+          <p class="dashboard-sources"><strong>Data Sources:</strong> Commerzbank (Gold price data), Trading Economics (Macroeconomic indicators)</p>
+          <div class="dashboard-preview">
+            <div class="iframe-click-overlay" onclick="trackDashboardClick(event)"></div>
+            <iframe
+              title="Gold Price Dashboard"
+              src="https://app.powerbi.com/view?r=eyJrIjoiOGY3YzQ0YTYtZjgzMy00YzBiLTllMTQtYjU2NTg3MTc0MjM3IiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
+              width="100%"
+              height="700"
+              frameborder="0"
+              allowfullscreen="true">
+            </iframe>
+          </div>
         </div>
       </section>
 
