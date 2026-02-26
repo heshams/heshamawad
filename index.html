@@ -392,6 +392,12 @@
       margin-bottom: 0;
     }
 
+    .dashboard-divider {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin: 60px 0;
+    }
+
     .dashboard-subtitle {
       color: #f39c12;
       font-size: 28px;
@@ -622,6 +628,8 @@
           </div>
         </div>
 
+        <hr class="dashboard-divider" />
+
         <!-- Dashboard 2: Gold Price & Macroeconomic -->
         <div class="dashboard-item">
           <h3 class="dashboard-subtitle">Gold Price &amp; Macroeconomic Dashboard</h3>
@@ -639,6 +647,26 @@
             </iframe>
           </div>
         </div>
+
+        <hr class="dashboard-divider" />
+
+        <!-- Dashboard 3: New Dashboard -->
+        <div class="dashboard-item">
+          <h3 class="dashboard-subtitle">Dashboard 3</h3>
+          <p class="dashboard-description">Interaktives Power BI Dashboard.</p>
+          <div class="dashboard-preview">
+            <div class="iframe-click-overlay" onclick="trackDashboardClick(event)"></div>
+            <iframe
+              title="Power BI Dashboard 3"
+              src="https://app.powerbi.com/view?r=eyJrIjoiNWQzNWMxZTQtNTExNC00ZDk0LTk5OGYtYmRlNjJmYjIwZWFkIiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
+              width="100%"
+              height="700"
+              frameborder="0"
+              allowfullscreen="true">
+            </iframe>
+          </div>
+        </div>
+
       </section>
 
       <footer>
@@ -782,6 +810,8 @@
           </div>
         </div>
 
+        <hr class="dashboard-divider" />
+
         <!-- Dashboard 2: Gold Price & Macroeconomic -->
         <div class="dashboard-item">
           <h3 class="dashboard-subtitle">Gold Price &amp; Macroeconomic Dashboard</h3>
@@ -799,6 +829,26 @@
             </iframe>
           </div>
         </div>
+
+        <hr class="dashboard-divider" />
+
+        <!-- Dashboard 3: New Dashboard -->
+        <div class="dashboard-item">
+          <h3 class="dashboard-subtitle">Dashboard 3</h3>
+          <p class="dashboard-description">Interactive Power BI Dashboard.</p>
+          <div class="dashboard-preview">
+            <div class="iframe-click-overlay" onclick="trackDashboardClick(event)"></div>
+            <iframe
+              title="Power BI Dashboard 3"
+              src="https://app.powerbi.com/view?r=eyJrIjoiNWQzNWMxZTQtNTExNC00ZDk0LTk5OGYtYmRlNjJmYjIwZWFkIiwidCI6Ijg4NzcwMzA0LTBlMjQtNGNjNy1iZDQwLTBjMTI4ZjljZWJlYiJ9"
+              width="100%"
+              height="700"
+              frameborder="0"
+              allowfullscreen="true">
+            </iframe>
+          </div>
+        </div>
+
       </section>
 
       <footer>
@@ -858,11 +908,9 @@
 
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          // If dashboard is 50% visible and we haven't tracked it yet
           if (entry.isIntersecting && entry.intersectionRatio >= 0.5 && !hasTrackedView) {
             hasTrackedView = true;
             
-            // Track dashboard view
             if (typeof gtag === 'function') {
               gtag('event', 'dashboard_view', {
                 event_category: 'engagement',
@@ -875,7 +923,7 @@
           }
         });
       }, {
-        threshold: 0.5 // Trigger when 50% of dashboard is visible
+        threshold: 0.5
       });
 
       observer.observe(dashboardSection);
@@ -893,7 +941,6 @@
 
       console.log('✅ Dashboard click tracked');
 
-      // Remove the specific overlay that was clicked
       if (event && event.currentTarget) {
         event.currentTarget.style.display = 'none';
       }
